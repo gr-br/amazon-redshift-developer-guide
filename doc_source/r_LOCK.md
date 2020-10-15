@@ -1,6 +1,6 @@
 # LOCK<a name="r_LOCK"></a>
 
-Restricts access to a database table\. This command is only meaningful when it is run inside a transaction block\.
+Restricts access to a database table\. This command is only meaningful when it is run inside a transaction block\. Requires UPDATE and/or DELETE privileges.
 
 The LOCK command obtains a table\-level lock in "ACCESS EXCLUSIVE" mode, waiting if necessary for any conflicting locks to be released\. Explicitly locking a table in this way causes reads and writes on the table to wait when they are attempted from other transactions or sessions\. An explicit table lock created by one user temporarily prevents another user from selecting data from that table or loading data into it\. The lock is released when the transaction that contains the LOCK command completes\.
 
